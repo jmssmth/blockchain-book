@@ -28,6 +28,13 @@ print(output4.hexdigest())  # 5a054570918b72560f134ed4c6250c92a0f68f92085f75beb5
 print(output5.hexdigest())  # 7db3fb3378a7fc4b81b065f1ad215666046badb3b335624ddf8d8de1650eba23
 print(output6.hexdigest())  # c1111e162eb6d424f42b1b970b98780963ee494bac8ae1f3ad2ef42f426ab3cc
 
+msg = "Hey Bob, I think you should learn about Blockchains! I've been investing in Bitcoin and "
+msg += "currently have exactly 12.03 BTC in my account."
+msg += "bolognese"
+msg_hash = sha256(msg.encode()).hexdigest()
+print(msg_hash)  # 1c445840b782d6e004a9969a7477953c4f27e50f0660929702dd3c6d18edbfc1
+
+
 # Typically, hash functions are considered cryptographic if they satisfy the following properties:
 # - Deterministic: The same input always yields the same hash.
 # - Intractability: It’s infeasible to find the input for a given hash except by exhaustion.
